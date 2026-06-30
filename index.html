@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGC Group — Brand Portal</title>
+<meta name="description" content="AGC Group brand asset portal — master logo, subsidiary lockups, colour system, typography and usage guidelines.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --ink:#191e2b;
+  --ink2:#1e2536;
+  --green:#23aa08;
+  --green2:#46b82e;
+  --green-d:#197d06;
+  --slate:#536877;
+  --grey:#c5c7c4;
+  --offwhite:#edece5;
+  --paper:#ffffff;
+  --red:#ce272d;
+  --line:#ecebe5;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',Arial,sans-serif;background:#eae9e3;color:var(--ink);min-height:100vh;
+  background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d5d4ce' fill-opacity='0.28'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ── HEADER ── */
+.portal-header{background:linear-gradient(135deg,#191e2b 0%,#1e2536 50%,#191e2b 100%);position:relative;overflow:hidden;}
+.portal-header::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 82% 50%,rgba(35,170,8,0.08) 0%,transparent 60%);pointer-events:none;}
+.portal-header-bar{height:5px;background:linear-gradient(90deg,var(--green),var(--green2),var(--green));}
+.portal-header-inner{padding:22px 48px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1;gap:24px;flex-wrap:wrap;}
+.portal-brand{display:flex;align-items:center;gap:16px;}
+.portal-title{text-align:right;}
+.portal-title-label{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#5f7384;font-weight:500;margin-bottom:4px;}
+.portal-title-name{font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.01em;}
+.portal-title-name span{color:var(--green2);}
+
+/* ── TOP NAV ── */
+.top-nav{background:linear-gradient(180deg,#191e2b,#161b27);padding:0 48px;display:flex;gap:0;border-bottom:3px solid var(--green);position:sticky;top:0;z-index:100;box-shadow:0 4px 16px rgba(0,0,0,0.15);overflow-x:auto;}
+.top-nav-btn{padding:15px 26px;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:none;background:transparent;color:#536877;cursor:pointer;transition:all 0.25s ease;border-bottom:3px solid transparent;margin-bottom:-3px;white-space:nowrap;}
+.top-nav-btn:hover{color:#c5c7c4;background:rgba(35,170,8,0.06);}
+.top-nav-btn.active{color:#fff;border-bottom-color:var(--green);}
+
+/* ── BREADCRUMB ── */
+.breadcrumb-bar{background:#1e2536;padding:9px 48px;font-size:11px;color:#536877;letter-spacing:0.04em;display:flex;align-items:center;gap:8px;}
+.breadcrumb-bar .bc-sep{color:#3a4050;margin:0 2px;}
+.breadcrumb-bar .bc-current{color:var(--green);font-weight:600;}
+
+/* ── SECTION SHELL ── */
+.ba-section{padding:44px 48px 20px;max-width:1240px;margin:0 auto;}
+.ba-section-label{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:6px;}
+.ba-section-title{font-size:28px;font-weight:800;color:var(--ink);letter-spacing:-0.02em;line-height:1.2;}
+.ba-section-title span{color:var(--green);}
+.ba-section-intro{font-size:13px;color:var(--slate);line-height:1.7;max-width:660px;margin-top:10px;}
+.ba-divider{height:1px;background:linear-gradient(90deg,var(--line),transparent);max-width:1240px;margin:8px auto;}
+
+/* ── LOGO CARDS ── */
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px;}
+.ba-card{border-radius:14px;padding:34px 26px 22px;display:flex;flex-direction:column;align-items:center;gap:18px;min-height:200px;justify-content:center;box-shadow:0 1px 3px rgba(0,0,0,0.04),0 6px 20px rgba(0,0,0,0.06);transition:transform 0.3s ease,box-shadow 0.3s ease;position:relative;}
+.ba-card:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,0.08),0 16px 40px rgba(0,0,0,0.1);}
+.ba-card-light{background:var(--paper);border:1px solid var(--line);}
+.ba-card-dark{background:var(--ink);border:1px solid #2a3142;}
+.ba-card-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:600;text-align:center;margin-top:auto;color:var(--ink);}
+.ba-card-dark .ba-card-label{color:rgba(255,255,255,0.6);}
+.ba-card-actions{display:flex;gap:6px;margin-top:2px;flex-wrap:wrap;justify-content:center;}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:7px;font-family:inherit;font-size:11px;font-weight:600;letter-spacing:0.04em;cursor:pointer;border:none;transition:all 0.2s ease;text-transform:uppercase;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+.btn svg{width:12px;height:12px;fill:currentColor;flex-shrink:0;}
+.btn-dl{background:var(--green);color:#fff;}
+.btn-dl:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 4px 12px rgba(35,170,8,0.32);}
+.btn-dl:active{transform:translateY(0);}
+.btn-ghost{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.18);box-shadow:none;}
+.btn-ghost:hover{background:rgba(255,255,255,0.16);transform:translateY(-2px);}
+.btn-ink{background:var(--ink);color:#fff;}
+.btn-ink:hover{background:#2a3142;transform:translateY(-2px);}
+.btn:disabled{opacity:0.55;cursor:wait;transform:none!important;}
+
+/* ── ICON SHOWCASE ── */
+.icon-showcase{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center;}
+.icon-chip{border-radius:12px;padding:12px;display:flex;align-items:center;justify-content:center;}
+.icon-chip.dark{background:var(--ink);}
+.icon-chip.lite{background:#fff;border:1px solid var(--line);}
+.favi-wrap{display:flex;flex-direction:column;gap:6px;align-items:center;}
+
+/* ── LOCKUP ROWS ── */
+.ba-sub-row{display:flex;align-items:center;gap:24px;padding:18px 22px;border:1px solid var(--line);background:var(--paper);border-radius:12px;margin-bottom:14px;transition:all 0.2s ease;box-shadow:0 1px 3px rgba(0,0,0,0.03);}
+.ba-sub-row:hover{background:#fcfcfb;box-shadow:0 4px 16px rgba(0,0,0,0.06);transform:translateY(-1px);}
+.ba-sub-logo{flex-shrink:0;}
+.ba-sub-info{display:flex;flex-direction:column;gap:4px;flex:1;min-width:150px;}
+.ba-sub-div{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:-0.01em;}
+.ba-sub-desc{font-size:11.5px;color:var(--slate);line-height:1.5;}
+.ba-sub-actions{display:flex;gap:6px;flex-shrink:0;}
+
+/* ── COLOUR PALETTE ── */
+.ba-palette{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;margin-top:24px;}
+.ba-swatch{border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 1px 4px rgba(0,0,0,0.04);transition:transform 0.25s ease,box-shadow 0.25s ease;cursor:pointer;}
+.ba-swatch:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,0.1);}
+.ba-swatch-col{height:84px;width:100%;position:relative;display:flex;align-items:flex-end;justify-content:flex-end;padding:8px;}
+.ba-swatch-copy{font-size:8px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;background:rgba(255,255,255,0.9);color:var(--ink);padding:3px 7px;border-radius:20px;opacity:0;transition:opacity 0.2s;}
+.ba-swatch:hover .ba-swatch-copy{opacity:1;}
+.ba-swatch-info{padding:12px 14px;}
+.ba-swatch-name{font-size:11.5px;font-weight:700;color:var(--ink);margin-bottom:3px;}
+.ba-swatch-role{font-size:9px;color:var(--slate);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:6px;}
+.ba-swatch-hex{font-size:10.5px;color:var(--slate);font-family:'Inter',monospace;letter-spacing:0.04em;}
+
+/* ── TYPOGRAPHY ── */
+.ba-type-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
+.ba-type-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;box-shadow:0 1px 4px rgba(0,0,0,0.04);transition:all 0.25s ease;}
+.ba-type-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,0.08);}
+.ba-type-spec{font-size:10px;color:var(--slate);letter-spacing:0.04em;border-top:1px solid var(--line);padding-top:12px;line-height:2;margin-top:14px;}
+.ba-type-scale{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;margin-top:8px;}
+
+/* ── USAGE ── */
+.ba-usage-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
+.usage-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.usage-card h4{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);margin-bottom:16px;font-weight:700;}
+.clearspace{position:relative;background:var(--offwhite);border:1px dashed var(--grey);border-radius:10px;padding:34px;display:flex;align-items:center;justify-content:center;}
+.clearspace .cs-pad{position:absolute;border:1px dashed var(--green);border-radius:6px;inset:14px;pointer-events:none;}
+.minsize{display:flex;align-items:flex-end;gap:30px;flex-wrap:wrap;padding:10px 0;}
+.minsize-item{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.minsize-tag{font-size:9px;color:var(--slate);letter-spacing:0.06em;text-transform:uppercase;}
+
+.dosdonts{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin-top:24px;}
+.dd-card{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.dd-preview{height:96px;display:flex;align-items:center;justify-content:center;background:var(--offwhite);position:relative;overflow:hidden;}
+.dd-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;font-size:11px;font-weight:600;}
+.dd-bar.do{background:#e7f7e3;color:var(--green-d);}
+.dd-bar.dont{background:#fdeaea;color:#c0392b;}
+.dd-ico{width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;flex-shrink:0;}
+.dd-ico.do{background:var(--green);}
+.dd-ico.dont{background:#c0392b;}
+
+/* ── DOWNLOADS STRIP ── */
+.dl-strip{background:linear-gradient(135deg,#191e2b,#1e2536);border-radius:16px;padding:34px 36px;margin:24px auto 0;max-width:1240px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;position:relative;overflow:hidden;}
+.dl-strip::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 90% 30%,rgba(35,170,8,0.16),transparent 60%);pointer-events:none;}
+.dl-strip-text h3{color:#fff;font-size:20px;font-weight:800;letter-spacing:-0.01em;margin-bottom:6px;}
+.dl-strip-text p{color:#7e8a98;font-size:12.5px;line-height:1.6;max-width:480px;}
+.dl-strip-actions{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1;}
+
+/* ── FOOTER ── */
+.portal-footer{background:linear-gradient(135deg,#191e2b,#1e2536);padding:22px 48px;display:flex;align-items:center;justify-content:space-between;border-top:3px solid var(--green);margin-top:48px;gap:16px;flex-wrap:wrap;}
+.portal-footer .pf-brand{font-size:10px;color:#536877;letter-spacing:0.12em;text-transform:uppercase;}
+.portal-footer .pf-brand span{color:var(--green2);}
+.portal-footer .pf-meta{display:flex;align-items:center;gap:16px;font-size:10px;color:#536877;}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:10px;font-size:12.5px;font-weight:500;letter-spacing:0.02em;box-shadow:0 8px 30px rgba(0,0,0,0.3);opacity:0;pointer-events:none;transition:all 0.3s ease;z-index:2000;display:flex;align-items:center;gap:9px;border:1px solid #2a3142;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast .toast-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-track{background:#eae9e3;}
+::-webkit-scrollbar-thumb{background:#c5c7c4;border-radius:5px;}
+::-webkit-scrollbar-thumb:hover{background:var(--slate);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:880px){
+  .portal-header-inner,.top-nav,.breadcrumb-bar{padding-left:20px;padding-right:20px;}
+  .ba-section{padding:32px 18px 16px;}
+  .ba-grid{grid-template-columns:1fr;}
+  .ba-type-grid,.ba-usage-grid{grid-template-columns:1fr;}
+  .ba-sub-row{flex-wrap:wrap;gap:14px;}
+  .ba-sub-actions{width:100%;}
+  .dl-strip{padding:26px 22px;}
+  .portal-footer{padding:20px;}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="portal-header">
+  <div class="portal-header-bar"></div>
+  <div class="portal-header-inner">
+    <div class="portal-brand">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="190" height="48" role="img" aria-label="AGC Group">
+        <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#ffffff"/>
+        <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+        <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+        <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#ffffff">AGC</text>
+        <rect x="96" y="58" width="76" height="3" rx="1.5" fill="#23aa08"/>
+      </svg>
+    </div>
+    <div class="portal-title">
+      <div class="portal-title-label">Brand Resource Centre</div>
+      <div class="portal-title-name">Brand <span>Portal</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ NAV ═══════════ -->
+<nav class="top-nav" id="topNav">
+  <button class="top-nav-btn active" data-target="sec-logo">Logo</button>
+  <button class="top-nav-btn" data-target="sec-lockups">Lockups</button>
+  <button class="top-nav-btn" data-target="sec-colour">Colour</button>
+  <button class="top-nav-btn" data-target="sec-type">Typography</button>
+  <button class="top-nav-btn" data-target="sec-usage">Usage</button>
+  <button class="top-nav-btn" data-target="sec-downloads">Downloads</button>
+</nav>
+
+<div class="breadcrumb-bar">
+  <span>AGC Group</span><span class="bc-sep">›</span><span>Brand Assets</span><span class="bc-sep">›</span><span class="bc-current" id="bcCurrent">Master Logo</span>
+</div>
+
+<!-- ═══════════ SECTION 01 · MASTER LOGO ═══════════ -->
+<section class="ba-section" id="sec-logo">
+  <div class="ba-section-label">Section 01</div>
+  <div class="ba-section-title">Master <span>Logo</span></div>
+  <p class="ba-section-intro">The AGC master logo combines the hexagon mark with the AGC wordmark and a green accent rule. It is the cornerstone of the identity — always use the approved master files below and never recreate, recolour or restyle the mark. Available in full colour, reversed (white) and as a standalone icon.</p>
+
+  <div class="ba-grid">
+
+    <!-- Full colour -->
+    <div class="ba-card ba-card-light" id="logo-full">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="230" height="58">
+        <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#191e2b"/>
+        <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+        <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+        <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#191e2b">AGC</text>
+        <rect x="96" y="58" width="76" height="3" rx="1.5" fill="#23aa08"/>
+      </svg>
+      <div class="ba-card-label">Full Colour — Light Background</div>
+      <div class="ba-card-actions">
+        <button class="btn btn-dl" onclick="dlSVG('logo-full','agc-master-logo.svg')"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>SVG</button>
+        <button class="btn btn-ink" onclick="dlPNG('logo-full','agc-master-logo.png',this)"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>PNG</button>
+      </div>
+    </div>
+
+    <!-- Reversed -->
+    <div class="ba-card ba-card-dark" id="logo-reversed">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="230" height="58">
+        <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#ffffff"/>
+        <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+        <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+        <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#ffffff">AGC</text>
+        <rect x="96" y="58" width="76" height="3" rx="1.5" fill="#23aa08"/>
+      </svg>
+      <div class="ba-card-label">Reversed — Dark Background</div>
+      <div class="ba-card-actions">
+        <button class="btn btn-dl" onclick="dlSVG('logo-reversed','agc-master-logo-white.svg')"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>SVG</button>
+        <button class="btn btn-ghost" onclick="dlPNG('logo-reversed','agc-master-logo-white.png',this)"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>PNG</button>
+      </div>
+    </div>
+
+    <!-- Icon mark -->
+    <div class="ba-card ba-card-light">
+      <div class="icon-showcase">
+        <div class="icon-chip dark" id="icon-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="50" height="50">
+            <polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#191e2b" stroke="#23aa08" stroke-width="1.5"/>
+            <polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#23aa08"/>
+            <polygon points="40,18 47,24 40,28 33,24" fill="#46b82e"/>
+          </svg>
+        </div>
+        <div class="icon-chip lite">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="50" height="50">
+            <polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#191e2b"/>
+            <polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#23aa08"/>
+            <polygon points="40,18 47,24 40,28 33,24" fill="#46b82e"/>
+          </svg>
+        </div>
+        <div class="favi-wrap">
+          <div class="icon-chip dark" style="padding:6px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="22" height="22">
+              <polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#191e2b"/>
+              <polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#23aa08"/>
+            </svg>
+          </div>
+          <span style="font-size:7px;color:var(--slate);letter-spacing:0.1em;text-transform:uppercase;">Favicon</span>
+        </div>
+      </div>
+      <div class="ba-card-actions">
+        <button class="btn btn-dl" onclick="dlSVG('icon-dark','agc-icon-mark.svg')"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>SVG</button>
+        <button class="btn btn-ink" onclick="dlPNG('icon-dark','agc-icon-mark.png',this)"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>PNG</button>
+      </div>
+      <div class="ba-card-label">Icon Mark — All Sizes</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ba-divider"></div>
+
+<!-- ═══════════ SECTION 02 · LOCKUPS ═══════════ -->
+<section class="ba-section" id="sec-lockups">
+  <div class="ba-section-label">Section 02</div>
+  <div class="ba-section-title">Subsidiary <span>Lockups</span></div>
+  <p class="ba-section-intro">Each AGC division uses a consistent lockup: the hexagon mark, the AGC wordmark, a green divider and the division descriptor. Use these endorsed lockups for divisional stationery, signage and communications across the group.</p>
+
+  <div style="margin-top:24px;" id="lockups-wrap">
+
+    <!-- Group -->
+    <div class="ba-sub-row" id="lockup-group">
+      <div class="ba-sub-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="280" height="53">
+          <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#191e2b"/>
+          <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+          <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+          <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#191e2b">AGC</text>
+          <rect x="184" y="16" width="2" height="48" rx="1" fill="#23aa08"/>
+          <text x="198" y="48" font-family="'Inter',Arial,sans-serif" font-weight="300" font-size="24" letter-spacing="0.12em" fill="#191e2b">GROUP</text>
+          <text x="198" y="64" font-family="'Inter',Arial,sans-serif" font-weight="400" font-size="9" letter-spacing="0.18em" fill="#536877">HOLDING &amp; INVESTMENTS</text>
+        </svg>
+      </div>
+      <div class="ba-sub-info"><div class="ba-sub-div">AGC Group</div><div class="ba-sub-desc">Parent holding &amp; investments company</div></div>
+      <div class="ba-sub-actions">
+        <button class="btn btn-dl" onclick="dlSVG('lockup-group','agc-group-lockup.svg')"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>SVG</button>
+        <button class="btn btn-ink" onclick="dlPNG('lockup-group','agc-group-lockup.png',this)"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>PNG</button>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="ba-sub-row" id="lockup-tools">
+      <div class="ba-sub-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 80" width="288" height="52">
+          <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#191e2b"/>
+          <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+          <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+          <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#191e2b">AGC</text>
+          <rect x="184" y="16" width="2" height="48" rx="1" fill="#23aa08"/>
+          <text x="198" y="48" font-family="'Inter',Arial,sans-serif" font-weight="300" font-size="24" letter-spacing="0.12em" fill="#191e2b">TOOLS</text>
+          <text x="198" y="64" font-family="'Inter',Arial,sans-serif" font-weight="400" font-size="9" letter-spacing="0.16em" fill="#23aa08">PRECISION · POWER · PERFORMANCE</text>
+        </svg>
+      </div>
+      <div class="ba-sub-info"><div class="ba-sub-div">AGC Tools</div><div class="ba-sub-desc">Power tools &amp; equipment</div></div>
+      <div class="ba-sub-actions">
+        <button class="btn btn-dl" onclick="dlSVG('lockup-tools','agc-tools-lockup.svg')"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>SVG</button>
+        <button class="btn btn-ink" onclick="dlPNG('lockup-tools','agc-tools-lockup.png',this)"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>PNG</button>
+      </div>
+    </div>
+
+    <!-- Hardware -->
+    <div class="ba-sub-row" id="lockup-hardware">
+      <div class="ba-sub-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="300" height="50">
+          <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#191e2b"/>
+          <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+          <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+          <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#191e2b">AGC</text>
+          <rect x="184" y="16" width="2" height="48" rx="1" fill="#23aa08"/>
+          <text x="198" y="48" font-family="'Inter',Arial,sans-serif" font-weight="300" font-size="24" letter-spacing="0.12em" fill="#191e2b">HARDWARE</text>
+          <text x="198" y="64" font-family="'Inter',Arial,sans-serif" font-weight="400" font-size="9" letter-spacing="0.16em" fill="#23aa08">SUPPLIES · TOOLS · MATERIALS</text>
+        </svg>
+      </div>
+      <div class="ba-sub-info"><div class="ba-sub-div">AGC Hardware</div><div class="ba-sub-desc">Hardware supplies &amp; retail</div></div>
+      <div class="ba-sub-actions">
+        <button class="btn btn-dl" onclick="dlSVG('lockup-hardware','agc-hardware-lockup.svg')"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>SVG</button>
+        <button class="btn btn-ink" onclick="dlPNG('lockup-hardware','agc-hardware-lockup.png',this)"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>PNG</button>
+      </div>
+    </div>
+
+    <!-- Quarry -->
+    <div class="ba-sub-row" id="lockup-quarry">
+      <div class="ba-sub-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 80" width="296" height="51">
+          <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#191e2b"/>
+          <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+          <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+          <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#191e2b">AGC</text>
+          <rect x="184" y="16" width="2" height="48" rx="1" fill="#23aa08"/>
+          <text x="198" y="48" font-family="'Inter',Arial,sans-serif" font-weight="300" font-size="24" letter-spacing="0.12em" fill="#191e2b">QUARRY</text>
+          <text x="198" y="64" font-family="'Inter',Arial,sans-serif" font-weight="400" font-size="9" letter-spacing="0.16em" fill="#23aa08">MINING · AGGREGATES · STONE</text>
+        </svg>
+      </div>
+      <div class="ba-sub-info"><div class="ba-sub-div">AGC Quarry</div><div class="ba-sub-desc">Mining &amp; aggregates</div></div>
+      <div class="ba-sub-actions">
+        <button class="btn btn-dl" onclick="dlSVG('lockup-quarry','agc-quarry-lockup.svg')"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>SVG</button>
+        <button class="btn btn-ink" onclick="dlPNG('lockup-quarry','agc-quarry-lockup.png',this)"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>PNG</button>
+      </div>
+    </div>
+
+    <!-- PreCast -->
+    <div class="ba-sub-row" id="lockup-precast">
+      <div class="ba-sub-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 80" width="300" height="50">
+          <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#191e2b"/>
+          <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+          <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+          <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#191e2b">AGC</text>
+          <rect x="184" y="16" width="2" height="48" rx="1" fill="#23aa08"/>
+          <text x="198" y="48" font-family="'Inter',Arial,sans-serif" font-weight="300" font-size="24" letter-spacing="0.12em" fill="#191e2b">PRECAST</text>
+          <text x="198" y="64" font-family="'Inter',Arial,sans-serif" font-weight="400" font-size="9" letter-spacing="0.16em" fill="#23aa08">PRECAST · CONCRETE · SOLUTIONS</text>
+        </svg>
+      </div>
+      <div class="ba-sub-info"><div class="ba-sub-div">AGC PreCast</div><div class="ba-sub-desc">Precast concrete products</div></div>
+      <div class="ba-sub-actions">
+        <button class="btn btn-dl" onclick="dlSVG('lockup-precast','agc-precast-lockup.svg')"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>SVG</button>
+        <button class="btn btn-ink" onclick="dlPNG('lockup-precast','agc-precast-lockup.png',this)"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>PNG</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="ba-divider"></div>
+
+<!-- ═══════════ SECTION 03 · COLOUR ═══════════ -->
+<section class="ba-section" id="sec-colour">
+  <div class="ba-section-label">Section 03</div>
+  <div class="ba-section-title">Colour <span>System</span></div>
+  <p class="ba-section-intro">Primary Green leads the AGC identity, anchored by Primary Dark for depth and contrast. The secondary green, slate and neutrals support layouts and typography, with alert red reserved for warnings only. Click any swatch to copy its hex.</p>
+
+  <div class="ba-palette" id="palette">
+    <div class="ba-swatch" onclick="copyHex('#191E2B',this)"><div class="ba-swatch-col" style="background:#191e2b;"><span class="ba-swatch-copy">Copy</span></div><div class="ba-swatch-info"><div class="ba-swatch-name">Primary Dark</div><div class="ba-swatch-role">Foundation</div><div class="ba-swatch-hex">#191E2B</div></div></div>
+    <div class="ba-swatch" onclick="copyHex('#23AA08',this)"><div class="ba-swatch-col" style="background:#23aa08;"><span class="ba-swatch-copy">Copy</span></div><div class="ba-swatch-info"><div class="ba-swatch-name">Primary Green</div><div class="ba-swatch-role">Signature</div><div class="ba-swatch-hex">#23AA08</div></div></div>
+    <div class="ba-swatch" onclick="copyHex('#46B82E',this)"><div class="ba-swatch-col" style="background:#46b82e;"><span class="ba-swatch-copy">Copy</span></div><div class="ba-swatch-info"><div class="ba-swatch-name">Secondary Green</div><div class="ba-swatch-role">Accent</div><div class="ba-swatch-hex">#46B82E</div></div></div>
+    <div class="ba-swatch" onclick="copyHex('#536877',this)"><div class="ba-swatch-col" style="background:#536877;"><span class="ba-swatch-copy">Copy</span></div><div class="ba-swatch-info"><div class="ba-swatch-name">Slate</div><div class="ba-swatch-role">Secondary Text</div><div class="ba-swatch-hex">#536877</div></div></div>
+    <div class="ba-swatch" onclick="copyHex('#C5C7C4',this)"><div class="ba-swatch-col" style="background:#c5c7c4;border-bottom:1px solid #ddd;"><span class="ba-swatch-copy">Copy</span></div><div class="ba-swatch-info"><div class="ba-swatch-name">Light Grey</div><div class="ba-swatch-role">Borders</div><div class="ba-swatch-hex">#C5C7C4</div></div></div>
+    <div class="ba-swatch" onclick="copyHex('#EDECE5',this)"><div class="ba-swatch-col" style="background:#edece5;border-bottom:1px solid #ddd;"><span class="ba-swatch-copy">Copy</span></div><div class="ba-swatch-info"><div class="ba-swatch-name">Off-White</div><div class="ba-swatch-role">Surface</div><div class="ba-swatch-hex">#EDECE5</div></div></div>
+    <div class="ba-swatch" onclick="copyHex('#CE272D',this)"><div class="ba-swatch-col" style="background:#ce272d;"><span class="ba-swatch-copy">Copy</span></div><div class="ba-swatch-info"><div class="ba-swatch-name">Alert Red</div><div class="ba-swatch-role">Warnings</div><div class="ba-swatch-hex">#CE272D</div></div></div>
+    <div class="ba-swatch" onclick="copyHex('#FFFFFF',this)"><div class="ba-swatch-col" style="background:#ffffff;border-bottom:1px solid #ddd;"><span class="ba-swatch-copy">Copy</span></div><div class="ba-swatch-info"><div class="ba-swatch-name">Paper</div><div class="ba-swatch-role">Base</div><div class="ba-swatch-hex">#FFFFFF</div></div></div>
+  </div>
+</section>
+
+<div class="ba-divider"></div>
+
+<!-- ═══════════ SECTION 04 · TYPOGRAPHY ═══════════ -->
+<section class="ba-section" id="sec-type">
+  <div class="ba-section-label">Section 04</div>
+  <div class="ba-section-title">Typo<span>graphy</span></div>
+  <p class="ba-section-intro">Inter is the AGC brand typeface — a clean, modern grotesque that performs across print, signage and screen. Heavy weights carry the wordmark and headlines; lighter weights handle division names and body copy. Arial is the approved system fallback.</p>
+
+  <div class="ba-type-grid">
+    <div class="ba-type-card">
+      <div style="font-size:46px;font-weight:900;color:var(--ink);letter-spacing:-0.03em;line-height:1;margin-bottom:10px;">Inter<br><span style="color:var(--green);">Black</span></div>
+      <div style="font-size:12px;color:var(--slate);margin-bottom:6px;">Wordmark · Section headers · Hero type</div>
+      <div class="ba-type-scale">
+        <span style="font-weight:900;font-size:26px;color:var(--ink);">Aa</span>
+        <span style="font-weight:800;font-size:22px;color:var(--ink);">Aa</span>
+        <span style="font-weight:700;font-size:18px;color:var(--ink);">Aa</span>
+      </div>
+      <div class="ba-type-spec">Weight 800–900 · Tracking −0.02em · Use: AGC wordmark &amp; headings</div>
+    </div>
+    <div class="ba-type-card">
+      <div style="font-size:46px;font-weight:300;color:var(--ink);letter-spacing:-0.01em;line-height:1;margin-bottom:10px;">Inter<br><span style="color:var(--slate);">Light</span></div>
+      <div style="font-size:12px;color:var(--slate);margin-bottom:6px;">Division names · Body copy · Labels</div>
+      <div class="ba-type-scale">
+        <span style="font-weight:500;font-size:22px;color:var(--ink);">Aa</span>
+        <span style="font-weight:400;font-size:18px;color:var(--ink);">Aa</span>
+        <span style="font-weight:300;font-size:16px;color:var(--ink);">Aa</span>
+      </div>
+      <div class="ba-type-spec">Weight 300–400 · Tracking +0.08em–0.20em · Use: division lockups, body</div>
+    </div>
+  </div>
+</section>
+
+<div class="ba-divider"></div>
+
+<!-- ═══════════ SECTION 05 · USAGE ═══════════ -->
+<section class="ba-section" id="sec-usage">
+  <div class="ba-section-label">Section 05</div>
+  <div class="ba-section-title">Logo <span>Usage</span></div>
+  <p class="ba-section-intro">Protecting the logo keeps the brand strong. Respect the minimum clear space and size, and never alter the mark. When in doubt, reach for an approved master file.</p>
+
+  <div class="ba-usage-grid">
+    <div class="usage-card">
+      <h4>Clear Space</h4>
+      <div class="clearspace">
+        <div class="cs-pad"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="180" height="45">
+          <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#191e2b"/>
+          <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+          <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+          <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#191e2b">AGC</text>
+          <rect x="96" y="58" width="76" height="3" rx="1.5" fill="#23aa08"/>
+        </svg>
+      </div>
+      <p style="font-size:11.5px;color:var(--slate);line-height:1.7;margin-top:14px;">Maintain clear space equal to the width of the hexagon mark on all four sides. Keep this margin free of type, imagery and competing graphics.</p>
+    </div>
+
+    <div class="usage-card">
+      <h4>Minimum Size</h4>
+      <div class="minsize">
+        <div class="minsize-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="160" height="40">
+            <polygon points="40,8 64,20 64,52 40,72 16,52 16,20" fill="#191e2b"/>
+            <polygon points="40,20 54,32 54,44 40,36 26,44 26,32" fill="#23aa08"/>
+            <polygon points="40,20 46,26 40,30 34,26" fill="#46b82e"/>
+            <text x="96" y="52" font-family="'Inter','Arial Black',Arial,sans-serif" font-weight="800" font-size="38" letter-spacing="-1" fill="#191e2b">AGC</text>
+            <rect x="96" y="58" width="76" height="3" rx="1.5" fill="#23aa08"/>
+          </svg>
+          <span class="minsize-tag">Digital · 120px wide min</span>
+        </div>
+        <div class="minsize-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="34" height="34">
+            <polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#191e2b"/>
+            <polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#23aa08"/>
+            <polygon points="40,18 47,24 40,28 33,24" fill="#46b82e"/>
+          </svg>
+          <span class="minsize-tag">Icon · 24px min</span>
+        </div>
+      </div>
+      <p style="font-size:11.5px;color:var(--slate);line-height:1.7;margin-top:14px;">Do not reproduce the full logo smaller than 25&nbsp;mm / 120&nbsp;px wide. Below that, use the standalone hexagon icon.</p>
+    </div>
+  </div>
+
+  <div class="dosdonts">
+    <div class="dd-card">
+      <div class="dd-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="46" height="46"><polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#191e2b"/><polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#23aa08"/><polygon points="40,18 47,24 40,28 33,24" fill="#46b82e"/></svg>
+      </div>
+      <div class="dd-bar do"><span class="dd-ico do">✓</span>Use approved colours</div>
+    </div>
+    <div class="dd-card">
+      <div class="dd-preview" style="background:#191e2b;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="46" height="46"><polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#ffffff"/><polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#23aa08"/><polygon points="40,18 47,24 40,28 33,24" fill="#46b82e"/></svg>
+      </div>
+      <div class="dd-bar do"><span class="dd-ico do">✓</span>Reverse on dark</div>
+    </div>
+    <div class="dd-card">
+      <div class="dd-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="46" height="46" style="transform:rotate(18deg);"><polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#191e2b"/><polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#23aa08"/><polygon points="40,18 47,24 40,28 33,24" fill="#46b82e"/></svg>
+      </div>
+      <div class="dd-bar dont"><span class="dd-ico dont">✕</span>Don't rotate or skew</div>
+    </div>
+    <div class="dd-card">
+      <div class="dd-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="46" height="46"><polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#ce272d"/><polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#ffc107"/><polygon points="40,18 47,24 40,28 33,24" fill="#ffd400"/></svg>
+      </div>
+      <div class="dd-bar dont"><span class="dd-ico dont">✕</span>Don't recolour</div>
+    </div>
+    <div class="dd-card">
+      <div class="dd-preview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="62" height="40" preserveAspectRatio="none"><polygon points="40,6 66,18 66,54 40,74 14,54 14,18" fill="#191e2b"/><polygon points="40,18 56,28 56,46 40,38 24,46 24,28" fill="#23aa08"/><polygon points="40,18 47,24 40,28 33,24" fill="#46b82e"/></svg>
+      </div>
+      <div class="dd-bar dont"><span class="dd-ico dont">✕</span>Don't stretch</div>
+    </div>
+  </div>
+</section>
+
+<div class="ba-divider"></div>
+
+<!-- ═══════════ SECTION 06 · DOWNLOADS ═══════════ -->
+<section class="ba-section" id="sec-downloads">
+  <div class="ba-section-label">Section 06</div>
+  <div class="ba-section-title">Brand <span>Downloads</span></div>
+  <p class="ba-section-intro">Grab the full set of vector assets in one click, or download individual files from the sections above. All marks export as scalable SVG and high-resolution (4×) PNG.</p>
+</section>
+<div class="dl-strip">
+  <div class="dl-strip-text">
+    <h3>AGC Group Logo Sheet</h3>
+    <p>A single SVG contact sheet containing the master logo and all five divisional lockups — print-ready and fully editable.</p>
+  </div>
+  <div class="dl-strip-actions">
+    <button class="btn btn-dl" style="padding:13px 22px;font-size:12px;" onclick="dlSheet()"><svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zm7-14v8.59l-2.3-2.3-1.41 1.41L12 18l3.71-3.3-1.41-1.41L13 14.59V6h-1z"/></svg>Download Logo Sheet (SVG)</button>
+    <button class="btn btn-ghost" style="padding:13px 22px;font-size:12px;" onclick="document.getElementById('sec-logo').scrollIntoView({behavior:'smooth'})">Browse Individual Assets</button>
+  </div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<div class="portal-footer">
+  <div class="pf-brand">AGC Group <span>Brand Portal</span></div>
+  <div class="pf-meta">
+    <span>© 2026 AGC Group Holdings Ltd</span>
+    <span style="color:#3a4050;">v1.0 · Brand Asset Centre</span>
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="toast-dot"></span><span id="toastMsg">Copied</span></div>
+
+<script>
+// ── Toast ──
+let _toastT;
+function toast(msg){
+  const t=document.getElementById('toast');
+  document.getElementById('toastMsg').textContent=msg;
+  t.classList.add('show');
+  clearTimeout(_toastT);
+  _toastT=setTimeout(()=>t.classList.remove('show'),2200);
+}
+
+// ── Copy hex ──
+function copyHex(hex,el){
+  const done=()=>toast(hex+' copied');
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(hex).then(done).catch(()=>fallbackCopy(hex,done));
+  }else{fallbackCopy(hex,done);}
+}
+function fallbackCopy(text,cb){
+  const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');}catch(e){}
+  document.body.removeChild(ta);cb&&cb();
+}
+
+// ── Serialize a card's primary SVG ──
+function serializeSVG(elementId){
+  const host=document.getElementById(elementId);
+  const svg=host.querySelector('svg[viewBox]');
+  if(!svg) return null;
+  const clone=svg.cloneNode(true);
+  clone.setAttribute('xmlns','http://www.w3.org/2000/svg');
+  const vb=svg.getAttribute('viewBox').split(/[\s,]+/).map(Number);
+  clone.setAttribute('width',vb[2]);
+  clone.setAttribute('height',vb[3]);
+  clone.querySelectorAll('text').forEach(t=>{
+    if(!t.getAttribute('font-family')) t.setAttribute('font-family',"Inter, Arial, sans-serif");
+  });
+  return '<?xml version="1.0" encoding="UTF-8"?>\n'+new XMLSerializer().serializeToString(clone);
+}
+
+// ── Download SVG ──
+function dlSVG(elementId,filename){
+  const str=serializeSVG(elementId);
+  if(!str){toast('Nothing to export');return;}
+  const blob=new Blob([str],{type:'image/svg+xml;charset=utf-8'});
+  triggerDownload(URL.createObjectURL(blob),filename,true);
+  toast('Downloaded '+filename);
+}
+
+// ── Canvas renderer (no external libs) ──
+async function renderSVGToCanvas(elementId,scale){
+  const host=document.getElementById(elementId);
+  const svg=host.querySelector('svg[viewBox]');
+  const vb=svg.getAttribute('viewBox').split(/[\s,]+/).map(Number);
+  const W=vb[2],H=vb[3];
+  if(document.fonts&&document.fonts.ready){try{await document.fonts.ready;}catch(e){}}
+  const cv=document.createElement('canvas');
+  cv.width=Math.round(W*scale);cv.height=Math.round(H*scale);
+  const ctx=cv.getContext('2d');
+  ctx.scale(scale,scale);
+
+  if(/reversed|dark/.test(elementId)){ctx.fillStyle='#191e2b';ctx.fillRect(0,0,W,H);}
+
+  for(const node of svg.children){
+    const tag=node.tagName.toLowerCase();
+    const fill=node.getAttribute('fill');
+    if(tag==='rect'){
+      const x=+node.getAttribute('x')||0,y=+node.getAttribute('y')||0;
+      const w=+node.getAttribute('width')||0,h=+node.getAttribute('height')||0;
+      const rx=+node.getAttribute('rx')||0;
+      ctx.fillStyle=fill||'#000';
+      ctx.beginPath();
+      if(rx>0&&ctx.roundRect){ctx.roundRect(x,y,w,h,rx);}else{ctx.rect(x,y,w,h);}
+      ctx.fill();
+    }else if(tag==='polygon'){
+      const pts=node.getAttribute('points').trim().split(/\s+/).map(p=>p.split(',').map(Number));
+      ctx.beginPath();
+      pts.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));
+      ctx.closePath();
+      if(fill&&fill!=='none'){ctx.fillStyle=fill;ctx.fill();}
+      const stroke=node.getAttribute('stroke');
+      if(stroke&&stroke!=='none'){ctx.strokeStyle=stroke;ctx.lineWidth=parseFloat(node.getAttribute('stroke-width'))||1;ctx.stroke();}
+    }else if(tag==='circle'){
+      const cx=+node.getAttribute('cx')||0,cy=+node.getAttribute('cy')||0,r=+node.getAttribute('r')||0;
+      ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);
+      ctx.fillStyle=fill||'#000';ctx.fill();
+    }else if(tag==='text'){
+      const x=+node.getAttribute('x')||0,y=+node.getAttribute('y')||0;
+      const fs=parseFloat(node.getAttribute('font-size'))||16;
+      const fw=node.getAttribute('font-weight')||'400';
+      const fstyle=node.getAttribute('font-style')||'normal';
+      const ls=parseFloat(node.getAttribute('letter-spacing'))||0;
+      ctx.fillStyle=fill||'#191e2b';
+      ctx.textBaseline='alphabetic';
+      ctx.font=fstyle+' '+fw+' '+fs+"px Inter, 'Arial Black', Arial, sans-serif";
+      const txt=node.textContent;
+      if(Math.abs(ls)>0.01){
+        let cx=x;
+        for(const ch of txt){ctx.fillText(ch,cx,y);cx+=ctx.measureText(ch).width+ls;}
+      }else{ctx.fillText(txt,x,y);}
+    }
+  }
+  return cv;
+}
+
+// ── Download PNG ──
+async function dlPNG(elementId,filename,btn){
+  const orig=btn.innerHTML;
+  btn.disabled=true;btn.innerHTML='Rendering…';
+  try{
+    const cv=await renderSVGToCanvas(elementId,4);
+    await new Promise(res=>cv.toBlob(b=>{
+      triggerDownload(URL.createObjectURL(b),filename,true);res();
+    },'image/png'));
+    toast('Downloaded '+filename);
+  }catch(e){
+    console.error(e);toast('PNG export failed — try SVG');
+  }finally{btn.disabled=false;btn.innerHTML=orig;}
+}
+
+// ── Combined logo sheet ──
+function dlSheet(){
+  const ids=['logo-full','lockup-group','lockup-tools','lockup-hardware','lockup-quarry','lockup-precast'];
+  const pad=40, sheetW=720;
+  let y=pad, rows='';
+  ids.forEach(id=>{
+    const svg=document.getElementById(id).querySelector('svg[viewBox]');
+    if(!svg) return;
+    const vb=svg.getAttribute('viewBox').split(/[\s,]+/).map(Number);
+    const w=vb[2],h=vb[3];
+    const targetW=Math.min(w,560);
+    const s=targetW/w;
+    const inner=new XMLSerializer().serializeToString(svg).replace(/<\/?svg[^>]*>/g,'');
+    rows+='<g transform="translate('+pad+','+y+') scale('+s.toFixed(4)+')">'+inner+'</g>';
+    y+=h*s+34;
+  });
+  const sheetH=Math.round(y+pad-34);
+  const out='<?xml version="1.0" encoding="UTF-8"?>\n<svg xmlns="http://www.w3.org/2000/svg" width="'+sheetW+'" height="'+sheetH+'" viewBox="0 0 '+sheetW+' '+sheetH+'">'+
+    '<rect width="'+sheetW+'" height="'+sheetH+'" fill="#ffffff"/>'+rows+'</svg>';
+  const blob=new Blob([out],{type:'image/svg+xml;charset=utf-8'});
+  triggerDownload(URL.createObjectURL(blob),'agc-group-logo-sheet.svg',true);
+  toast('Downloaded logo sheet');
+}
+
+// ── Generic download helper ──
+function triggerDownload(url,filename,revoke){
+  const a=document.createElement('a');
+  a.href=url;a.download=filename;
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  if(revoke) setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+
+// ── Nav: active state + breadcrumb ──
+const NAV_NAMES={'sec-logo':'Master Logo','sec-lockups':'Subsidiary Lockups','sec-colour':'Colour System','sec-type':'Typography','sec-usage':'Logo Usage','sec-downloads':'Downloads'};
+const navBtns=[...document.querySelectorAll('.top-nav-btn')];
+navBtns.forEach(b=>b.addEventListener('click',()=>{
+  document.getElementById(b.dataset.target).scrollIntoView({behavior:'smooth',block:'start'});
+}));
+const sections=navBtns.map(b=>document.getElementById(b.dataset.target));
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      navBtns.forEach(b=>b.classList.toggle('active',b.dataset.target===id));
+      const bc=document.getElementById('bcCurrent');
+      if(bc&&NAV_NAMES[id]) bc.textContent=NAV_NAMES[id];
+    }
+  });
+},{rootMargin:'-45% 0px -50% 0px',threshold:0});
+sections.forEach(s=>s&&obs.observe(s));
+</script>
+</body>
+</html>
